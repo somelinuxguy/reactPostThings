@@ -16,7 +16,7 @@ const boks = [{
 let genID = () => 
     Math.floor(Math.random() * 101009).toString();
 
-    // h is conventional, and shorter to type.
+// h is conventional, and shorter to type.
 const h = React.createElement;
 
 let BokRow = (props) =>
@@ -87,7 +87,7 @@ class Homepage extends React.Component {
             h('h1', {className: "pageTitle"}, 'Bok Bok Bgok!'),
             h('h2', {className: "subtitle"}, 'The dissonant screeching of barnyard creatures.'),
             h(BokForm, {addBok: addBok}),
-            h(BokList, { boks: this.state.boks})
+            h(BokList, { boks: this.state.boks.reverse()})
         );
     }
 }
@@ -96,3 +96,5 @@ class Homepage extends React.Component {
 // My main
 //
 ReactDOM.render( h(Homepage, {boks}), document.getElementById('react-main') );
+
+//github is just... horrible.
